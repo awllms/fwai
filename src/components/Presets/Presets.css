@@ -1,0 +1,16 @@
+.Presets {
+    margin-top: 40px;
+    transition-duration: 500ms;
+}
+
+.Presets h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Preset {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}

@@ -1,13 +1,18 @@
 import React from 'react';
 
+import { SelectBox } from '../SelectBox/SelectBox';
+
 import './FormTextArea.css';
 
 
-export const FormTextArea = ({ ...formTextAreaProps }) => {
-    return(
+export const FormTextArea = ({ selectbox, ...formTextAreaProps }) => {
+    return (
         <div className="FormTextArea">
             <label>
-                <h2>Enter prompt</h2>
+                <div className="FormTextArea-header">
+                    <h2>Enter prompt</h2>
+                    <SelectBox value={selectbox[0]} onSelectBoxChange={selectbox[1]} />
+                </div>
                 <textarea { ...formTextAreaProps } />
             </label>
         </div>

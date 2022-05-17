@@ -1,0 +1,51 @@
+.SelectBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.SelectBox h4 {
+    font-weight: bold;
+}
+
+.SelectBox select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    appearance: none;
+    padding: 10px 50px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.SelectBox select:hover {
+    outline: none;
+    cursor: pointer;
+}
+
+
+.SelectBox select:focus {
+    outline: none;
+}
+
+.SelectBox select::-ms-expand {
+    display: none;
+}
+
+
+.SelectBox:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}

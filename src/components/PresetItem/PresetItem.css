@@ -1,0 +1,18 @@
+.PresetItem {
+    padding: 15px 10px;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    width: 100%;
+    margin: 0 2.5px;
+    text-align: center;
+    line-height: 1rem;
+}
+
+.PresetItem:hover {
+    background-color: #0080de;
+    cursor: pointer;
+}

@@ -1,18 +1,20 @@
 import React from 'react';
 
 import { ResponseItem } from '../ResponseItem/ResponseItem';
-
+import FadeIn from 'react-fade-in';
 
 import './Response.css';
 
 
-export const Response = () => {
+export const Response = ({ response: { promptTitle, prompt, responseTitle, responseText }}) => {
     return (
-        <div className="Response">
-            <ResponseItem title="Prompt:" text="This is a test prompt." />
+        <FadeIn>
+            <div className="Response">
+                <ResponseItem title={promptTitle} text={prompt} />
 
-            <ResponseItem title="Response:" text="This is a test response." />
-        </div>
+                <ResponseItem title={responseTitle} text={responseText} />
+            </div>
+        </FadeIn>
     );
 };
 

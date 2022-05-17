@@ -1,0 +1,9 @@
+.DefaultResponse {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.DefaultResponse-message {
+    color: #d3d3d3;
+}

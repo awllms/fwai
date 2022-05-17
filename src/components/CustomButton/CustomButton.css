@@ -16,3 +16,7 @@
 .CustomButton:hover {
     background-color: #0080de;
 }
+
+.CustomButton.red:hover {
+    background-color: red;
+}

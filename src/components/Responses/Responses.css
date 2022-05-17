@@ -1,5 +1,6 @@
 .Responses {
     margin-top: 40px;
+    transition-duration: 500ms;
 }
 
 .Responses h3 {
