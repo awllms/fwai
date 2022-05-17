@@ -1,0 +1,15 @@
+.Header {
+    margin-top: 50px;
+  }
+  
+  .Header-logo {
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: bold;
+    transition-duration: 500ms;
+    transition-property: opacity;
+  }
+  
+  .Header-logo:hover {
+    opacity: 0.8;
+  }

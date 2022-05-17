@@ -1,17 +1,19 @@
 import { Prompt } from './components/Prompt/Prompt';
 import { Responses } from './components/Responses/Responses';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-        <header className="App-header">
-            <h1 className="App-logo">Fun with AI</h1>
-        </header>
+        <Header>Fun With AI</Header>
         
         <Prompt />
         <Responses />
+
+        <Footer />
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.ResponseItem {
+    margin-bottom: 20px;
+}
+
+.ResponseItem h4 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}

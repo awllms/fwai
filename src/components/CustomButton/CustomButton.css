@@ -1,0 +1,18 @@
+.CustomButton {
+    width: auto;
+    height: 40px;
+    padding: 0 30px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Barlow Semi Condensed';
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.CustomButton:hover {
+    background-color: #0080de;
+}

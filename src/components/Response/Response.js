@@ -1,18 +1,17 @@
 import React from 'react';
 
+import { ResponseItem } from '../ResponseItem/ResponseItem';
+
+
+import './Response.css';
+
 
 export const Response = () => {
     return (
-        <div className="Response-container">
-            <div className="Response-prompt-container">
-                <span className="Response-prompt">Prompt: </span>
-                <p>This is a test prompt.</p>
-            </div>
+        <div className="Response">
+            <ResponseItem title="Prompt:" text="This is a test prompt." />
 
-            <div className="Response-response-container">
-                <span className="Response-prompt">Response: </span>
-                <p>This is a test response.</p>
-            </div>
+            <ResponseItem title="Response:" text="This is a test response." />
         </div>
     );
 };

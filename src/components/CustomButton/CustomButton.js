@@ -2,9 +2,9 @@ import React from 'react';
 
 import './CustomButton.css';
 
-export const CustomButton = ({ children }) => {
+export const CustomButton = ({ children, visibility }) => {
     return (
-        <button className="CustomButton-regular">{ children }</button>
+        <button className="CustomButton" style={{ visibility: visibility}}>{ children }</button>
     );
 };
 
