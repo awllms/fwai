@@ -1,4 +1,20 @@
 .Footer {
-    margin-top: 50px;
-    padding-bottom: 50px;
+    margin: 100px 0 75px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer-text {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+.Footer-text a {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+.Footer-text a:hover {
+    color: #0080de;
 }

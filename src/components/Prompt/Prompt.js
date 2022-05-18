@@ -25,9 +25,8 @@ const presets = {
     ],
     2: "Who is Batman?",
     3: [
-        "Write a poem about golden...",
-        "Write a poem about golden doodles."
-
+        "Explain electricity like I'm...",
+        "Explain electricity like I'm five years old",
     ]
 }
 
@@ -208,7 +207,12 @@ export const Prompt = () => {
                                     <CustomButton isFetching={isFetching} value="submit" onButtonClick={onButtonClick}>Submit</CustomButton>
 
                                 }
-                                <CustomButton isFetching={isFetching} value="clear" onButtonClick={onButtonClick}>Clear</CustomButton>
+
+                                {
+                                    isLoading ?
+                                    <CustomButton disabled={true}>Clear</CustomButton> :
+                                    <CustomButton isFetching={isFetching} value="clear" onButtonClick={onButtonClick}>Clear</CustomButton>
+                                }
                             </div>
                         </FadeIn> :
                         <CustomButton visibility="hidden">Submit</CustomButton> 

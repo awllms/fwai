@@ -5,7 +5,11 @@ import './Footer.css';
 
 export const Footer = () => {
     return (
-        <footer className="Footer"></footer>
+        <footer className="Footer">
+            <span className="Footer-text">
+                <a className="Footer-links" href="https://awllms.com" target="_blank" rel="noopener noreferrer">&copy; 2022 awllms</a>
+            </span>
+        </footer>
     );
 };
 

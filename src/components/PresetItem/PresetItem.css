@@ -10,6 +10,7 @@
     margin: 0 2.5px;
     text-align: center;
     line-height: 1rem;
+    transition-duration: 500ms;
 }
 
 .PresetItem:hover {

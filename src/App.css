@@ -2,6 +2,14 @@
   margin: 0 auto;
   max-width: 600px;
 }
+.App:hover {
+  transition-duration: 500ms;
+}
+
+.App a {
+  transition-duration: 500ms;
+}
+
 
 
 @media only screen and (max-width: 680px) {
