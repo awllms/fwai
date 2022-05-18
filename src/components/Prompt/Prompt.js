@@ -49,7 +49,6 @@ export const Prompt = () => {
 
     useEffect(() => {
         localStorage.setItem('responses', JSON.stringify(responses));
-        console.log("Fire")
     }, [responses]);
 
     useEffect(() => {
@@ -110,7 +109,6 @@ export const Prompt = () => {
 
     useEffect(() => {
         if (Object.keys(response).length !== 0) {
-            console.log(response)
             setNextPrompt({
                 promptTitle: 'Prompt:',
                 responseTitle: 'Response:',
