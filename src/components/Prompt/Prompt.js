@@ -40,6 +40,26 @@ export const Prompt = () => {
     const [isError, setIsError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [response, setResponse] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        if (localStorage.getItem('responses') && JSON.parse(localStorage.getItem('responses')).length) {
+            setResponses(JSON.parse(localStorage.getItem('responses')));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('responses', JSON.stringify(responses));
+        console.log("Fire")
+    }, [responses]);
+
+    useEffect(() => {
+
+        if (Object.keys(response).length !== 0) {
+            setIsLoading(false);
+        }
+
+    }, [response]);
 
     useEffect(() => {
         async function fetchOpenAi(data) {
@@ -62,7 +82,6 @@ export const Prompt = () => {
                 setResponse(dataResponse);
 
             } catch (err) {
-                console.log(err.message)
                 setIsError(true);
                 setErrorMessage(err.message)
             }
@@ -71,6 +90,7 @@ export const Prompt = () => {
         if (isFetching) {
             fetchOpenAi(initialData);
             setIsFetching(false);
+            setIsLoading(true)
         }
 
     }, [isFetching, selectBoxValue]);
@@ -81,9 +101,11 @@ export const Prompt = () => {
                 promptTitle: 'Prompt:',
                 responseTitle: 'Response:',
                 prompt: textAreaValue,
-                responseText: errorMessage
+                responseText: errorMessage,
+                engine: 'Error'
             });
             setIsError(false);
+            setResponse(errorMessage);
         }
     }, [isError, textAreaValue, errorMessage]);
 
@@ -94,20 +116,22 @@ export const Prompt = () => {
                 promptTitle: 'Prompt:',
                 responseTitle: 'Response:',
                 prompt: textAreaValue,
-                responseText: response.choices[0].text
+                responseText: response.choices[0].text,
+                engine: response.model
             });
         }
 
     }, [response, textAreaValue]);
 
     useEffect(() => {
-        if (responses.indexOf(nextPrompt) === -1 && nextPrompt.responseText) {
+        if (responses.indexOf(nextPrompt) === -1 && nextPrompt.responseText && nextPrompt.responseText !=='') {
             setResponses([...responses, nextPrompt]);
 
             setNextPrompt({
                 ...nextPrompt,
                 prompt: '',
-                responseText: ''
+                responseText: '',
+                engine: ''
             });
 
             setResponse({})
@@ -140,7 +164,6 @@ export const Prompt = () => {
     const onSelectBoxChange = (event) => {
         const { value } = event.target;
         setSelectBoxValue(value);
-        console.log(value)
     }
 
     const onPresetItemClick = (key) => {
@@ -153,24 +176,35 @@ export const Prompt = () => {
         }
     }
 
+    const onResponsesClearButtonClick = () => {
+        setResponses([]);
+    }
+
     return(
         <section className="Prompt">
             <form>
-                <FormTextArea
-                    id="enter-prompt"
-                    name="prompt-textbox"
-                    value={textAreaValue}
-                    placeholder="Type or paste (⌘ + V) your text here."
-                    onChange={onTextAreaChange}
-                    selectbox={[selectBoxValue, onSelectBoxChange]}
-                />
+                <FadeIn>
+                    <FormTextArea
+                        id="enter-prompt"
+                        name="prompt-textbox"
+                        value={textAreaValue}
+                        placeholder="Type or paste (⌘ + V) your text here."
+                        onChange={onTextAreaChange}
+                        selectbox={[selectBoxValue, onSelectBoxChange]}
+                        isloading={isLoading}
+                    />
+                </FadeIn>
                 <div className="button-container">
                     {textAreaValue ? 
                         <FadeIn>
                             <div className="buttons">
                                 {
-                                    isFetching ?
-                                    <CustomButton isFetching={isFetching} disabled={true} value="submit" onButtonClick={onButtonClick}>Test</CustomButton> :
+                                    isLoading ?
+                                    <CustomButton disabled={true}>
+                                        <div className="fa-xl">
+                                            <i className="fa-solid fa-circle-notch fa-spin"></i>
+                                        </div>
+                                    </CustomButton> :
                                     <CustomButton isFetching={isFetching} value="submit" onButtonClick={onButtonClick}>Submit</CustomButton>
 
                                 }
@@ -182,7 +216,7 @@ export const Prompt = () => {
                 </div>
             </form>
             <Presets presets={presets} onPresetItemClick={onPresetItemClick} />
-            <Responses responses={responses} />
+            <Responses responses={responses} onResponsesClearButtonClick={onResponsesClearButtonClick} />
         </section>
     );
 };

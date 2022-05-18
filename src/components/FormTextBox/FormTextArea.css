@@ -27,6 +27,11 @@
     outline: none;
 }
 
+.FormTextArea textarea.loading {
+    /* background-color: #F4F4F4; */
+    color: #d3d3d3;
+}
+
 .FormTextArea-header {
     display: flex;
     justify-content: space-between;

@@ -5,7 +5,8 @@ import { SelectBox } from '../SelectBox/SelectBox';
 import './FormTextArea.css';
 
 
-export const FormTextArea = ({ selectbox, ...formTextAreaProps }) => {
+export const FormTextArea = ({ selectbox, isloading, ...formTextAreaProps }) => {
+    const loadingClassName = `${isloading ? 'loading' : ''}`;
     return (
         <div className="FormTextArea">
             <label>
@@ -13,7 +14,12 @@ export const FormTextArea = ({ selectbox, ...formTextAreaProps }) => {
                     <h2>Enter prompt</h2>
                     <SelectBox value={selectbox[0]} onSelectBoxChange={selectbox[1]} />
                 </div>
-                <textarea { ...formTextAreaProps } />
+                {
+                    isloading ? 
+                    <textarea { ...formTextAreaProps } className={loadingClassName} readOnly /> :
+                    <textarea { ...formTextAreaProps } className={loadingClassName} />
+
+                }
             </label>
         </div>
     );

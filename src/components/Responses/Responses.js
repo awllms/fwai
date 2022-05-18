@@ -2,13 +2,24 @@ import React from 'react';
 
 import { Response } from '../Response/Response';
 import { DefaultResponse } from '../DefaultResponse/DefaultResponse';
+import { CustomButton } from '../CustomButton/CustomButton';
+
+import FadeIn from 'react-fade-in';
 
 import './Responses.css';
 
-export const Responses = ({ responses }) => {
+export const Responses = ({ responses, onResponsesClearButtonClick }) => {
     return(
         <section className="Responses">
-            <h3>Responses</h3>
+            <div className="Responses-header">
+                <h3>Responses</h3>
+                {responses.length ? 
+                    <FadeIn>
+                        <CustomButton value="clear" onButtonClick={onResponsesClearButtonClick}>Clear Responses</CustomButton>
+                    </FadeIn> :
+                    <CustomButton value="clear" visibility="hidden">Clear Responses</CustomButton>
+                }
+            </div>
             {responses.length ?
                 responses.map((response, index) =>
                     <Response key={index} response={response} />

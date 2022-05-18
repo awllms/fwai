@@ -4,3 +4,17 @@
     border-radius: 5px;
     padding: 25px 25px 10px;
 }
+
+.Response-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Response-engine-container {
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
