@@ -2,10 +2,10 @@ import React from 'react';
 
 import './CustomButton.css';
 
-export const CustomButton = ({ children, visibility, value, onButtonClick }) => {
-    const buttonClasses = `CustomButton ${value === 'clear' ? 'red' : ''}`
+export const CustomButton = ({ children, visibility, value, isFetching, disabled, onButtonClick }) => {
+    const buttonClasses = `CustomButton ${value === 'clear' ? 'red' : ''} ${isFetching ? 'fetching' : ''}`
     return (
-        <button className={buttonClasses} value={value} onClick={onButtonClick} style={{ visibility: visibility}}>{ children }</button>
+        <button className={buttonClasses} disabled={disabled} value={value} onClick={onButtonClick} style={{ visibility: visibility}}>{ children }</button>
     );
 };
 

@@ -6,7 +6,7 @@ import FadeIn from 'react-fade-in';
 import './Response.css';
 
 
-export const Response = ({ response: { promptTitle, prompt, responseTitle, responseText }}) => {
+export const Response = ({ response: { promptTitle, responseTitle, prompt, responseText }}) => {
     return (
         <FadeIn>
             <div className="Response">

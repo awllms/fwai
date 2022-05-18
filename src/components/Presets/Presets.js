@@ -13,7 +13,7 @@ export const Presets = ({ presets, onPresetItemClick }) => {
             <div className="Preset">
                 <PresetItem id="1" title={presets[1][0]} onPresetItemClick={onPresetItemClick} />
                 <PresetItem id="2" title={presets[2]} onPresetItemClick={onPresetItemClick}  />
-                <PresetItem id="3" title={presets[3]} onPresetItemClick={onPresetItemClick}  />
+                <PresetItem id="3" title={presets[3][0]} onPresetItemClick={onPresetItemClick}  />
             </div>
         </div>
     );
