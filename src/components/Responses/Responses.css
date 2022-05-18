@@ -13,3 +13,34 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+@media only screen and (max-width: 380px) {
+    .Responses-header button {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    .Responses-header {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Responses {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .Responses-header {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Responses h3 {
+        margin-bottom: 20px;
+    }
+
+}

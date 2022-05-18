@@ -16,3 +16,10 @@
     background-color: #0080de;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 380px) {
+    .PresetItem {
+        width: 60%;
+        margin-bottom: 10px;
+    }
+}

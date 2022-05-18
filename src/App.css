@@ -2,3 +2,33 @@
   margin: 0 auto;
   max-width: 600px;
 }
+
+
+@media only screen and (max-width: 680px) {
+  .App {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .App {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .App {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .App {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+}

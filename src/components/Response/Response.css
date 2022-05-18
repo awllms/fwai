@@ -18,3 +18,12 @@
     border-radius: 30px;
     font-size: 0.8rem;
 }
+
+
+@media only screen and (max-width: 380px) {
+    .Response  {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -37,3 +37,29 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media only screen and (max-width: 425px) {
+    .FormTextArea textarea {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .FormTextArea-header {
+        flex-direction: column;
+    }
+
+    .FormTextArea h2 {
+        margin-bottom: 20px;
+    }
+
+    .FormTextArea textarea {
+        /* background-color: #d3d3d3; */
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+  

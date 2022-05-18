@@ -22,6 +22,7 @@
     border: none;
     border-radius: 5px;
     text-align: center;
+    font-size: 0.8rem;
 }
 
 .SelectBox select:hover {
@@ -48,4 +49,11 @@
     height: 0;
     border: 6px solid transparent;
     border-color: #fff transparent transparent transparent;
+}
+
+
+@media only screen and (max-width: 680px) {
+    .SelectBox select {
+        padding: 10px 30px 10px 20px;
+    }
 }
