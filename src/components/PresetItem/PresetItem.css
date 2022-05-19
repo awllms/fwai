@@ -18,6 +18,15 @@
     cursor: pointer;
 }
 
+.PresetItem.isloading {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.PresetItem.isloading:hover {
+    background-color: #d3d3d3;
+}
+
 @media only screen and (max-width: 380px) {
     .PresetItem {
         width: 60%;

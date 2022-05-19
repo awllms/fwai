@@ -1,5 +1,5 @@
-import { Prompt } from './components/Prompt/Prompt';
 import { Header } from './components/Header/Header';
+import { Prompt } from './components/Prompt/Prompt';
 import { Footer } from './components/Footer/Footer';
 
 import './App.css';

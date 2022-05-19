@@ -30,7 +30,7 @@ const presets = {
     ]
 }
 
-const fetchUrl = process.env.NODE_ENV === 'production' ? 'https://funwithaiserver.herokuapp.com' : 'http://localhost:3001';
+const fetchUrl = 'https://funwithaiserver.herokuapp.com';
 
 export const Prompt = () => {
     const [textAreaValue, setTextAreaValue] = useState('');
@@ -218,8 +218,8 @@ export const Prompt = () => {
                     }
                 </div>
             </form>
-            <Presets presets={presets} onPresetItemClick={onPresetItemClick} />
-            <Responses responses={responses} onResponsesClearButtonClick={onResponsesClearButtonClick} />
+            <Presets isloading={isLoading} presets={presets} onPresetItemClick={onPresetItemClick} />
+            <Responses isloading={isLoading} responses={responses} onResponsesClearButtonClick={onResponsesClearButtonClick} />
         </section>
     );
 };

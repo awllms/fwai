@@ -8,14 +8,14 @@ import FadeIn from 'react-fade-in';
 
 import './Responses.css';
 
-export const Responses = ({ responses, onResponsesClearButtonClick }) => {
+export const Responses = ({ isloading, responses, onResponsesClearButtonClick }) => {
     return(
         <section className="Responses">
             <div className="Responses-header">
                 <h3>Responses</h3>
                 {responses.length ? 
                     <FadeIn>
-                        <CustomButton value="clear" onButtonClick={onResponsesClearButtonClick}>Clear Responses</CustomButton>
+                        <CustomButton disabled={isloading} value="clear" onButtonClick={onResponsesClearButtonClick}>Clear Responses</CustomButton>
                     </FadeIn> :
                     <CustomButton value="clear" visibility="hidden">Clear Responses</CustomButton>
                 }
