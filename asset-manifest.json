@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/funwithai/static/css/main.51657069.css",
-    "main.js": "/funwithai/static/js/main.35e467f3.js",
+    "main.js": "/funwithai/static/js/main.d3117d30.js",
     "static/js/787.c8bd8a1c.chunk.js": "/funwithai/static/js/787.c8bd8a1c.chunk.js",
     "index.html": "/funwithai/index.html",
     "main.51657069.css.map": "/funwithai/static/css/main.51657069.css.map",
-    "main.35e467f3.js.map": "/funwithai/static/js/main.35e467f3.js.map",
+    "main.d3117d30.js.map": "/funwithai/static/js/main.d3117d30.js.map",
     "787.c8bd8a1c.chunk.js.map": "/funwithai/static/js/787.c8bd8a1c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51657069.css",
-    "static/js/main.35e467f3.js"
+    "static/js/main.d3117d30.js"
   ]
 }
