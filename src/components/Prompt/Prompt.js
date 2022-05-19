@@ -30,6 +30,8 @@ const presets = {
     ]
 }
 
+const fetchUrl = process.env.NODE_ENV === 'production' ? 'https://funwithaiserver.herokuapp.com' : 'http://localhost:3001';
+
 export const Prompt = () => {
     const [textAreaValue, setTextAreaValue] = useState('');
     const [selectBoxValue, setSelectBoxValue] = useState('text-curie-001');
@@ -62,13 +64,12 @@ export const Prompt = () => {
     useEffect(() => {
         async function fetchOpenAi(data) {
             try {
-                const response = await fetch(`https://api.openai.com/v1/engines/${selectBoxValue}/completions`, {
+                const response = await fetch(`${fetchUrl}/ai`, {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
+                        "Content-Type": "application/json"
                     },
-                    body: JSON.stringify(data),
+                    body: JSON.stringify({data: data, model: selectBoxValue}),
                 });
         
                 if (!response.ok) {
@@ -113,7 +114,7 @@ export const Prompt = () => {
                 promptTitle: 'Prompt:',
                 responseTitle: 'Response:',
                 prompt: textAreaValue,
-                responseText: response.choices[0].text,
+                responseText: response.choices ? response.choices[0].text : '',
                 engine: response.model
             });
         }
