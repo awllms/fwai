@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/funwithai/static/css/main.2d96d418.css",
-    "main.js": "/funwithai/static/js/main.22beed54.js",
-    "static/js/787.c8bd8a1c.chunk.js": "/funwithai/static/js/787.c8bd8a1c.chunk.js",
-    "index.html": "/funwithai/index.html",
-    "main.2d96d418.css.map": "/funwithai/static/css/main.2d96d418.css.map",
-    "main.22beed54.js.map": "/funwithai/static/js/main.22beed54.js.map",
-    "787.c8bd8a1c.chunk.js.map": "/funwithai/static/js/787.c8bd8a1c.chunk.js.map"
+    "main.css": "/fwai/static/css/main.2d96d418.css",
+    "main.js": "/fwai/static/js/main.61ece670.js",
+    "static/js/787.c8bd8a1c.chunk.js": "/fwai/static/js/787.c8bd8a1c.chunk.js",
+    "index.html": "/fwai/index.html",
+    "main.2d96d418.css.map": "/fwai/static/css/main.2d96d418.css.map",
+    "main.61ece670.js.map": "/fwai/static/js/main.61ece670.js.map",
+    "787.c8bd8a1c.chunk.js.map": "/fwai/static/js/787.c8bd8a1c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d96d418.css",
-    "static/js/main.22beed54.js"
+    "static/js/main.61ece670.js"
   ]
 }
