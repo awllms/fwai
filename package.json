@@ -1,7 +1,7 @@
 {
   "name": "funwithai",
   "version": "0.1.0",
-  "homepage": "https://awllms.github.io/funwithai",
+  "homepage": "https://awllms.github.io/fwai",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
