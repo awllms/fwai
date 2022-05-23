@@ -15,6 +15,13 @@
     align-items: center;
 }
 
+
+@media only screen and (max-width: 680px) {
+    .Preset {
+        flex-direction: column;
+    }
+}
+
 @media only screen and (max-width: 380px) {
     .Presets {
         text-align: center;

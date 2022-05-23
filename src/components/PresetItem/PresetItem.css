@@ -27,9 +27,15 @@
     background-color: #d3d3d3;
 }
 
+@media only screen and (max-width: 680px) {
+    .PresetItem {
+        margin-bottom: 10px;
+    }
+}
+
 @media only screen and (max-width: 380px) {
     .PresetItem {
-        width: 60%;
+        width: 80%;
         margin-bottom: 10px;
     }
 }
