@@ -30,7 +30,7 @@ const presets = {
     ]
 }
 
-const fetchUrl = 'https://funwithaiserver.herokuapp.com';
+const fetchUrl = process.env.NODE_ENV === 'production' ? 'https://funwithaiserver.herokuapp.com' : 'http://localhost:3001';
 
 export const Prompt = () => {
     const [textAreaValue, setTextAreaValue] = useState('');
